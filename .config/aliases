@@ -1,0 +1,18 @@
+alias rsync='rsync -a -s -v -P -e ssh'
+alias grep='grep --color=auto'
+alias ls='ls --color=auto'
+alias ll='ls --color=auto -lah'
+alias cd..='cd ..'
+alias u='cd ..'
+alias mkdir='mkdir -p -v'
+alias ping='ping -c 5'
+alias perl-rename='perl-rename -iv'
+alias truecrypt='truecrypt -t'
+alias clip='xclip -selection clipboard' # default clipboard is different than normal windows. https://wiki.archlinux.org/index.php/clipboard#Background
+
+# Exit aliases
+alias exot='exit'
+alias exity='exit'
+
+# Load machine and user dependent aliases
+[ -f "${HOME}/.config/custom_aliases" ] && . "${HOME}/.config/custom_aliases"

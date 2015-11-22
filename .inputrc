@@ -1,0 +1,6 @@
+# Include global inputrc
+$include /etc/inputrc
+
+
+# Add slash when auto completing with tab symlink directories
+set mark-symlinked-directories on

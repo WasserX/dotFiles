@@ -1,0 +1,44 @@
+#! /bin/bash
+
+_anidb()
+{
+    local cur prev words cword split
+    _init_completion -s n : || return
+
+    _expand || return 0
+
+
+    case ${prev} in
+        -e*)
+            COMPREPLY=($(compgen -W "Torrent ed2k DD IRC" -- ${cur}))
+            return 0
+            ;;
+
+        --external|--format|--source)
+            compopt +o nospace
+            return 0
+            ;;
+    esac
+
+    case ${cur} in
+        -*)
+            COMPREPLY=( $(compgen -W "--username --password
+                                      --recursive --suffix --no-cache
+                                      --multihash --identify --add
+                                      --delete --watched --source=
+                                      --deleted --internal --external=
+                                      --rename --format=" -- ${cur}))
+            #[[ ${COMPREPLY} == *= ]] || compopt +o nospace
+            ;;
+
+        *)
+            compopt +o nospace
+            _filedir
+            return 0
+            ;;
+    esac
+
+    return 0
+}
+
+complete -F _anidb anidb

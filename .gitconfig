@@ -1,0 +1,13 @@
+[include]
+    path = ~/.sensitive/.gituser
+[color]
+    branch = auto
+    diff = auto
+    status = auto
+[push]
+    default = simple
+[alias]
+    ci = commit
+    co = checkout
+    st = status
+    br = branch

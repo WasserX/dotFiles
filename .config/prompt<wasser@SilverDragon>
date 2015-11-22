@@ -1,0 +1,1 @@
+PS1="$Green\u@\h$White:$Blue\w$Purple$(__git_ps1)$BGreen\$ $BWhite"

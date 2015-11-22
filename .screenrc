@@ -1,0 +1,14 @@
+#Use scrolling from X
+termcapinfo xterm* ti@:te@
+
+#Delete residual text
+altscreen on
+
+#Use 256 colors
+term screen-256color
+
+#Informative statusbar
+hardstatus off
+hardstatus alwayslastline
+hardstatus string '%{= kG}[ %{G}%H %{g}][%= %{= kw}%?%-Lw%?%{r}(%{W}%n*%f%t%?(%u)%?%{r})%{w}%?%+Lw%?%?%= %{g}][%{B} %m-%d
+ %{W} %c %{g}]' 
