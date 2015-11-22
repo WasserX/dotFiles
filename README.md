@@ -76,27 +76,26 @@ Consider that if the file is just going to be sourced by another, it is not need
 ## Deploy script options
 `deploy.py` offers multiple options that can be seen with `deploy.py -h`.
 
-* source
-** The root to analyze recursively for files to be symlinked following the 'custom tag' matching.
+`source`:
+The root to analyze recursively for files to be symlinked following the 'custom tag' matching.
 
-* destination
-** The destination root. This is where the directory structure of `source` will be mirrored and symlinks created.
+`destination`:
+The destination root. This is where the directory structure of `source` will be mirrored and symlinks created.
 
-* --username
-** Override the username used when finding 'custom files' for deployment. By default it uses the current user.
+`--username`:
+Override the username used when finding 'custom files' for deployment. By default it uses the current user.
 
-* --hostname
-** Override the host used when finding 'custom files' for deployment. By default it uses the current machine's hostname.
+`--hostname`:
+Override the host used when finding 'custom files' for deployment. By default it uses the current machine's hostname.
 
-* --ignorefile
-** If a `.deployignore` file is found, it will be used to find patterns to ignore when processing files/folders. A different file can be specified instead. The format of the file is a list where every line is a glob pattern.
+`--ignorefile`:
+If a `.deployignore` file is found, it will be used to find patterns to ignore when processing files/folders. A different file can be specified instead. The format of the file is a list where every line is a glob pattern.
 
-* -v, --verbose
-** Print more output when executing
+`-v, --verbose`:
+Print more output when executing
 
-* -n, --dry
-** Simulate execution of this script. It will just show what files / directories would be created and in which location.
+`-n, --dry`:
+Simulate execution of this script. It will just show what files / directories would be created and in which location.
 
-* --force
-** It may be the case that the destination files already exist. In this case, the script will fail for safety reasons. If you want to override the existing files, you can use this flag to first delete the destination.
-
+`--force`:
+It may be the case that the destination files already exist. In this case, the script will fail for safety reasons. If you want to override the existing files, you can use this flag to first delete the destination.
