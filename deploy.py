@@ -151,18 +151,20 @@ def ignore_matcher_creator(file_name):
 
 def parse_arguments():
     """Parse command line arguments to the script."""
-    parser = argparse.ArgumentParser(description='Create symlinks from source.')
+    parser = argparse.ArgumentParser(
+           description='Create symlinks recursively from source to destination.',
+           formatter_class=argparse.ArgumentDefaultsHelpFormatter)
     parser.add_argument('source', type=str, nargs='?', default=os.getcwd(),
                         help='root where symlinks sources will be.')
     parser.add_argument('destination', type=str, nargs='?',
                         default=os.path.expanduser("~"),
                         help='root where symlinks will be created.')
     parser.add_argument('--username', type=str, default=getpass.getuser(),
-                        help='Override the username to match.')
+                        help='override the username to match.')
     parser.add_argument('--hostname', type=str, default=socket.gethostname(),
-                        help='Override the hostname to match.')
+                        help='override the hostname to match.')
     parser.add_argument('--ignorefile', type=str, default='.deployignore',
-                        help='File containing ignore rules.')
+                        help='file containing ignore rules.')
     parser.add_argument('-v', '--verbose', action='store_true')
     parser.add_argument('-n', '--dry', action='store_true',
                         help='just print output, do not make changes.')
