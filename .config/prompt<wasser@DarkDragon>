@@ -1,0 +1,2 @@
+PS1="${Purple}\u@\h${Color_Off}:${Blue}\w ${BPurple}\$ ${Color_Off}"
+

@@ -1,0 +1,2 @@
+PS1="${Yellow}\u@\h${Color_Off}:${Blue}\w ${BYellow}\$ ${Color_Off}"
+

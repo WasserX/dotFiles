@@ -24,6 +24,7 @@ import re
 import types
 import fnmatch
 
+
 class CPrinter:
     """Returns strings in the specified colors."""
     _cpurple = '\033[95m'
@@ -152,8 +153,8 @@ def ignore_matcher_creator(file_name):
 def parse_arguments():
     """Parse command line arguments to the script."""
     parser = argparse.ArgumentParser(
-           description='Create symlinks recursively from source to destination.',
-           formatter_class=argparse.ArgumentDefaultsHelpFormatter)
+        description='Create symlinks recursively from source to destination.',
+        formatter_class=argparse.ArgumentDefaultsHelpFormatter)
     parser.add_argument('source', type=str, nargs='?', default=os.getcwd(),
                         help='root where symlinks sources will be.')
     parser.add_argument('destination', type=str, nargs='?',

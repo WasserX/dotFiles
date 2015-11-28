@@ -1,0 +1,1 @@
+PS1="${Cyan}\u@\h${Color_Off}:${Blue}\w ${BGreen}\$ ${Color_Off}"

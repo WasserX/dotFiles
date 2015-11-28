@@ -11,3 +11,4 @@
     co = checkout
     st = status
     br = branch
+    lga = log --decorate --all --color --graph --oneline

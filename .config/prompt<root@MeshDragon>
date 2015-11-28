@@ -1,0 +1,1 @@
+PS1="${Red}\u${Color_Off}@${Cyan}\h${Color_Off}:${Red}\w ${BRed}\$ ${Color_Off}"

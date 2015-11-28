@@ -1,1 +1,1 @@
-PS1="\[$Red\]\u@\h\[$White\]:\[$Blue\]\w \[$BRed\]\$ \[$BWhite\]"
+PS1="${Red}\u${Color_Off}@${Green}\h${Color_Off}:${Red}\w ${BRed}\$ ${Color_Off}"
