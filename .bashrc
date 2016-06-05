@@ -4,6 +4,9 @@
 # Add our bin directory to PATH
 [ -d "${HOME}/bin" ] && PATH="${HOME}/bin:${PATH}"
 
+# Add rubygems directory to PATH
+[ -x $(command -v ruby >/dev/null 2>&1) ] && PATH="${PATH}:$(ruby -rubygems -e "puts Gem.user_dir")/bin"
+
 # append to the history file, don't overwrite it
 shopt -s histappend
 
